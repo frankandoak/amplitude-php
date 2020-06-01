@@ -499,8 +499,6 @@ class Amplitude
             'api_key' => $this->apiKey,
             'event' => json_encode($this->event),
         ];
-        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
         curl_setopt($ch, \CURLOPT_POSTFIELDS, $postFields);
         // Always return instead of outputting response!
         curl_setopt($ch, \CURLOPT_RETURNTRANSFER, true);
